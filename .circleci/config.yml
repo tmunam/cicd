@@ -87,8 +87,8 @@ workflows:
     jobs:
       - build
       - deploy-staging:
-        requires::
+          requires:
           - build
       - deploy-prod:
-        requires:
+          requires:
           - build
