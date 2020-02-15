@@ -87,8 +87,10 @@ workflows:
     jobs:
       - build
       - deploy-staging:
+          type: approval
           requires:
           - build
       - deploy-prod:
+          type: approval
           requires:
           - build
