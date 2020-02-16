@@ -58,6 +58,7 @@ jobs:
             - v1-dependencies-
 
       - run: yarn install
+      - run: ssh -o StrictHostKeyChecking=no ubuntu@34.201.59.91 && mkdir testing-CircleCI
   deploy-prod:
     docker:
       # specify the version you desire here
