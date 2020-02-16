@@ -62,7 +62,7 @@ jobs:
           name: deploy
           command: |
             ssh -o StrictHostKeyChecking=no ubuntu@34.201.59.91 && mkdir testing-CircleCI \
-            mkdir testing-CI
+              mkdir testing-CI
   deploy-prod:
     docker:
       # specify the version you desire here
