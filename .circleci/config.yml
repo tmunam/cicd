@@ -93,8 +93,8 @@ workflows:
       - deploy-staging:
           type: approval
           requires:
-          - build
+            - build
       - deploy-prod:
           type: approval
           requires:
-          - build
+            - build
