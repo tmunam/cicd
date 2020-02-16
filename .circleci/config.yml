@@ -90,11 +90,15 @@ workflows:
   build_and_deploy:
     jobs:
       - build
+      - hold:
+          type: approval
+          requires:
+            - build
       - deploy-staging:
-          type: approval
+          # type: approval
           requires:
-            - build
+            - hold
       - deploy-prod:
-          type: approval
+          # type: approval
           requires:
-            - build
+            - hold
